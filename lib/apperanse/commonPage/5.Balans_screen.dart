@@ -1,12 +1,12 @@
 // ignore_for_file: file_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage.dart';
 import 'package:tutor/helper/buttonWidgets.dart';
 import 'package:tutor/helper/style_text.dart';
 
 class BalansScreen extends StatelessWidget {
-  const BalansScreen({super.key});
+  final Widget backpage;
+  const BalansScreen(this.backpage,{super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class BalansScreen extends StatelessWidget {
     void SubmitSaleData() {
       if (formkey.currentState!.validate()) {
         formkey.currentState!.save();
-        print(CardData);
+        // print(CardData);
       }
     }
 
@@ -31,7 +31,8 @@ class BalansScreen extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () => Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (ctx) =>  const PupilMainPage(0))),
+                    MaterialPageRoute(
+                        builder: (ctx) => backpage)),
                 child: Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: SizedBox(
