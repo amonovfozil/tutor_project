@@ -27,7 +27,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -35,7 +35,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -43,7 +43,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -51,7 +51,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -59,7 +59,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -67,7 +67,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -75,7 +75,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -83,7 +83,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -91,7 +91,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -99,7 +99,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -107,7 +107,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -115,7 +115,7 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
     category(
         title: 'IT',
         icon: 'assets/icons/category1.png',
@@ -123,6 +123,6 @@ class dataPupilPage {
     category(
         title: 'Языки',
         icon: 'assets/icons/category2.png',
-        rout: const PupilMainPage()),
+        rout:  const PupilMainPage(0)),
   ];
 }

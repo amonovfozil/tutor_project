@@ -1,6 +1,11 @@
 // ignore_for_file: file_names, unused_element, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/My_reviews.dart';
+import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/Transactions.dart';
+import '/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/5.Balans_screen.dart';
+import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage.dart';
+import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/Paid%20services.dart';
 import 'package:tutor/helper/style_text.dart';
 
 class SideBar extends StatelessWidget {
@@ -8,9 +13,14 @@ class SideBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget SidebarIteams(String title, String iconUrl) {
+    Widget SidebarIteams(
+        String title, String iconUrl, Widget pagerout, bool ismainpage) {
       return TextButton.icon(
-          onPressed: () {},
+          onPressed: () => ismainpage
+              ? Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (ctx) => pagerout))
+              : Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (ctx) => pagerout)),
           icon: ImageIcon(
             AssetImage(
               iconUrl,
@@ -79,23 +89,34 @@ class SideBar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SidebarIteams(
-                      'Личные данные', 'assets/icons/sidebar/user.png'),
+                      'Личные данные',
+                      'assets/icons/sidebar/user.png',
+                      const PupilMainPage(1),
+                      true),
                   const SizedBox(height: 20),
-                  SidebarIteams('Мои чаты', 'assets/icons/sidebar/letter.png'),
+                  SidebarIteams('Мои чаты', 'assets/icons/sidebar/letter.png',
+                      const PupilMainPage(4), true),
+                  const SizedBox(height: 20),
+                  SidebarIteams('Мой баланс', 'assets/icons/sidebar/balans.png',
+                      const BalansScreen(), true),
                   const SizedBox(height: 20),
                   SidebarIteams(
-                      'Мой баланс', 'assets/icons/sidebar/balans.png'),
+                      'Платные услуги',
+                      'assets/icons/sidebar/chat.png',
+                      const PaidServices(),
+                      false),
                   const SizedBox(height: 20),
-                  SidebarIteams(
-                      'Платные услуги', 'assets/icons/sidebar/chat.png'),
+                  SidebarIteams('Транзакции', 'assets/icons/sidebar/Swap.png',
+                      const Transactions(), false),
                   const SizedBox(height: 20),
-                  SidebarIteams('Транзакции', 'assets/icons/sidebar/Swap.png'),
+                  SidebarIteams('Мои отзывы', 'assets/icons/sidebar/cart.png',
+                      const MyReviews(), false),
                   const SizedBox(height: 20),
-                  SidebarIteams('Мои отзывы', 'assets/icons/sidebar/cart.png'),
+                  SidebarIteams('Избранные', 'assets/icons/sidebar/img1.png',
+                      const PupilMainPage(0), true),
                   const SizedBox(height: 20),
-                  SidebarIteams('Избранные', 'assets/icons/sidebar/img1.png'),
-                  const SizedBox(height: 20),
-                  SidebarIteams('Выйти', 'assets/icons/sidebar/Logout.png'),
+                  SidebarIteams('Выйти', 'assets/icons/sidebar/Logout.png',
+                      const PupilMainPage(0), true),
                 ],
               ),
             )

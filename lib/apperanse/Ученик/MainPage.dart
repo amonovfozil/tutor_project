@@ -1,35 +1,42 @@
-// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, unused_local_variable
+// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, unused_local_variable, non_constant_identifier_names, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
-import 'package:tutor/SideBar_screen.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/2.Profile_screen.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/3.Chat_screen.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/5.Balans_screen.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/Category_IT.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/1.Main_page_screen.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/NewsPage.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/News_info.dart';
-import 'package:tutor/data/category.dart';
-import 'package:tutor/helper/style_text.dart';
+
+import './2.Profile_screen.dart';
+import './3.Chat_screen.dart';
+import './5.Balans_screen.dart';
+import './MainPage/Category_IT.dart';
+import './MainPage/1.Main_page_screen.dart';
+import './MainPage/NewsPage.dart';
+import './MainPage/News_info.dart';
+import '../../data/category.dart';
+import '../../helper/style_text.dart';
+import '../../SideBar_screen.dart';
 
 class PupilMainPage extends StatefulWidget {
-  const PupilMainPage({super.key});
+  final int Pageindex;
+  const PupilMainPage(this.Pageindex, {super.key});
 
   @override
   State<PupilMainPage> createState() => _PupilMainPageState();
 }
 
 class _PupilMainPageState extends State<PupilMainPage> {
-  var index = 0;
+  bool init = true;
 
+  var index;
   @override
   Widget build(BuildContext context) {
+    if (init) {
+      index = widget.Pageindex;
+    }
+
     final scaffoldKey = GlobalKey<ScaffoldState>();
     List<category> menus = [
       category(
           title: 'Главная',
           icon: 'assets/icons/naviagtion/home.png',
-          rout: const PupilMainPage()),
+          rout: const PupilMainPage(0)),
       category(
           title: 'Профиль',
           icon: 'assets/icons/naviagtion/pupil.png',
@@ -136,6 +143,7 @@ class _PupilMainPageState extends State<PupilMainPage> {
             backgroundColor: const Color(0xFF47406A),
             onPressed: () {
               setState(() {
+                init = false;
                 index = 4;
               });
             },
@@ -167,9 +175,10 @@ class _PupilMainPageState extends State<PupilMainPage> {
                 (menu) => InkWell(
                   onTap: () {
                     setState(() {
+                      init = false;
                       index = menus.indexOf(menu);
                       if (index == 3) {
-                        Navigator.of(context).push(MaterialPageRoute(
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (ctx) => const BalansScreen()));
                       }
                       // widget.getIndex(menus.indexOf(menu));

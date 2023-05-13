@@ -27,7 +27,7 @@ class SignInScreen1_2 extends StatelessWidget {
             builder: (ctx) => LeadingPage3(
                   function: () => Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (ctx) => const PupilMainPage(),
+                      builder: (ctx) => const PupilMainPage(0),
                     ),
                   ),
                 )));
@@ -197,7 +197,8 @@ class SignInScreen1_2 extends StatelessWidget {
                   },
                 ),
                 const SizedBox(height: 62),
-                widgets().Button_1('Зарегестрироваться', saveNewData,const Color(0xFFF4B840))
+                widgets().Button_1(
+                    'Зарегестрироваться', saveNewData, const Color(0xFFF4B840))
               ],
             ),
           ),

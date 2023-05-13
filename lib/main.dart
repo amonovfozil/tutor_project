@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xFF47406A),
       ),
-      home: const PupilMainPage(),
+      home:  const PupilMainPage(0),
     );
   }
 }

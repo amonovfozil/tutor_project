@@ -98,6 +98,7 @@ class StylesText {
   TextStyle style_4(double size) {
     return TextStyle(
         fontSize: size,
+        height: 1.3,
         fontWeight: FontWeight.w600,
         fontStyle: FontStyle.normal,
         color: const Color(0xFF9A9A9A),
