@@ -1,6 +1,8 @@
 // ignore_for_file: file_names, prefer_const_literals_to_create_immutables, unused_local_variable, non_constant_identifier_names, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/4.Favorites_screen.dart';
+import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/Notifications.dart';
 
 import './2.Profile_screen.dart';
 import './3.Chat_screen.dart';
@@ -85,7 +87,9 @@ class _PupilMainPageState extends State<PupilMainPage> {
                     Stack(
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (ctx) => const Notifications())),
                           icon: Icon(
                             Icons.notifications_none_rounded,
                             color: index == 4
@@ -127,9 +131,11 @@ class _PupilMainPageState extends State<PupilMainPage> {
                 ? const mainPage()
                 : index == 1
                     ? const ProfileScreen()
-                    : index == 4
-                        ? const ChatScreen()
-                        : Container(),
+                    : index == 2
+                        ? const FavoritesScreen()
+                        : index == 4
+                            ? const ChatScreen()
+                            : Container(),
             // ),
           ],
         ),

@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, camel_case_types, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/sort_reviews.dart';
 import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/table.dart';
 import 'package:tutor/helper/buttonWidgets.dart';
 import 'package:tutor/helper/style_text.dart';
@@ -355,153 +356,10 @@ class Expert_info extends StatelessWidget {
                 style: StylesText().style_1_11(17),
               ),
               const SizedBox(height: 20),
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      ListTile(
-                        leading: const CircleAvatar(
-                          backgroundColor: Colors.black,
-                          backgroundImage: AssetImage(
-                            'assets/images/avatar.png',
-                          ),
-                          radius: 23,
-                        ),
-                        title: Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Text(
-                            'Рафаэль Ройтман',
-                            style: StylesText().style_1_1(16),
-                          ),
-                        ),
-                        trailing: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: const [
-                            Icon(
-                              Icons.star_rate_rounded,
-                              color: Color(0xFFF4B840),
-                              size: 26,
-                            ),
-                            Icon(
-                              Icons.star_rate_rounded,
-                              color: Color(0xFFF4B840),
-                              size: 26,
-                            ),
-                            Icon(
-                              Icons.star_rate_rounded,
-                              color: Color(0xFFF4B840),
-                              size: 26,
-                            ),
-                            Icon(
-                              Icons.star_rate_rounded,
-                              color: Color(0xFFF4B840),
-                              size: 26,
-                            ),
-                            Icon(
-                              Icons.star_border_rounded,
-                              color: Color(0xFFF4B840),
-                            )
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        child: Text(
-                          'Быстро нашел себе преподавателя. Отличная платформа',
-                          style: StylesText().style_5_1(15),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      ListTile(
-                        leading: const CircleAvatar(
-                          backgroundColor: Colors.black,
-                          backgroundImage: AssetImage(
-                            'assets/images/avatar.png',
-                          ),
-                          radius: 23,
-                        ),
-                        title: Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Text(
-                            'Рафаэль Ройтман',
-                            style: StylesText().style_1_1(16),
-                          ),
-                        ),
-                        trailing: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: const [
-                            Icon(
-                              Icons.star_rate_rounded,
-                              color: Color(0xFFF4B840),
-                              size: 26,
-                            ),
-                            Icon(
-                              Icons.star_rate_rounded,
-                              color: Color(0xFFF4B840),
-                              size: 26,
-                            ),
-                            Icon(
-                              Icons.star_rate_rounded,
-                              color: Color(0xFFF4B840),
-                              size: 26,
-                            ),
-                            Icon(
-                              Icons.star_half_rounded,
-                              color: Color(0xFFF4B840),
-                            ),
-                            Icon(
-                              Icons.star_border_rounded,
-                              color: Color(0xFFF4B840),
-                            )
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        child: Text(
-                          'Быстро нашел себе преподавателя. Отличная платформа',
-                          style: StylesText().style_5_1(15),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Center(
-                child: TextButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.arrow_downward,
-                      color: Color(0xFF686868),
-                    ),
-                    label: Text(
-                      'Смотреть ещё',
-                      style: StylesText().style_5_1(14),
-                    )),
-              ),
+              const ReviewsSort(reviews: ['1', '2', '3', '4']),
               const SizedBox(height: 20),
-              widgets().Button_1('Оставить отзыв', () {},const Color(0xFFF4B840)),
+              widgets()
+                  .Button_1('Оставить отзыв', () {}, const Color(0xFFF4B840)),
               const SizedBox(height: 25),
             ],
           ),

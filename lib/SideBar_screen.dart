@@ -113,7 +113,7 @@ class SideBar extends StatelessWidget {
                       const MyReviews(), false),
                   const SizedBox(height: 20),
                   SidebarIteams('Избранные', 'assets/icons/sidebar/img1.png',
-                      const PupilMainPage(0), true),
+                      const PupilMainPage(2), true),
                   const SizedBox(height: 20),
                   SidebarIteams('Выйти', 'assets/icons/sidebar/Logout.png',
                       const PupilMainPage(0), true),
