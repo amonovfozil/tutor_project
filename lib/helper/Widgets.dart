@@ -115,4 +115,42 @@ class widgets {
       ),
     );
   }
+
+  Widget creatInputWidget(
+    String title,
+    TextInputType typeKeyboard,
+    Function(String) validate,
+    Function(String) answer,
+    bool iscon, [
+    int? maxline,
+    TextEditingController? passwordController,
+  ]) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          title,
+          textAlign: TextAlign.center,
+          style: StylesText().style_2_11(16, false),
+        ),
+        const SizedBox(height: 13),
+        TextFormField(
+          maxLines: maxline,
+          controller: iscon ? passwordController : null,
+          cursorColor: Colors.amber,
+          decoration: const InputDecoration(
+            fillColor: Color(0xFFEFEFEF),
+            filled: true,
+            border: OutlineInputBorder(borderSide: BorderSide.none),
+          ),
+          keyboardType: typeKeyboard,
+          textInputAction: TextInputAction.next,
+          style: StylesText().style_2_11(16, false),
+          validator: (value) => validate(value!),
+          onSaved: (newValue) => answer(newValue!),
+        ),
+      ],
+    );
+  }
 }

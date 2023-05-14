@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutor/apperanse/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/Main_Page.dart';
 import 'package:tutor/apperanse/AuthScreen/category_Auth.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage.dart';
 import 'package:tutor/apperanse/commonPage/5.Balans_screen.dart';
 import 'package:tutor/apperanse/commonPage/My_reviews.dart';
 import 'package:tutor/apperanse/commonPage/Paid%20services.dart';
@@ -93,11 +92,11 @@ class SideBar2 extends StatelessWidget {
                   SidebarIteams(
                       'Личные данные',
                       'assets/icons/sidebar/user.png',
-                      const PupilMainPage(1),
+                      const TeacherMainPage(0),
                       true),
                   const SizedBox(height: 20),
                   SidebarIteams('Мои чаты', 'assets/icons/sidebar/letter.png',
-                      const PupilMainPage(4), true),
+                      const TeacherMainPage(4), true),
                   const SizedBox(height: 20),
                   SidebarIteams('Мой баланс', 'assets/icons/sidebar/balans.png',
                       const BalansScreen(TeacherMainPage(0)), true),
@@ -111,7 +110,7 @@ class SideBar2 extends StatelessWidget {
                   SidebarIteams(
                       'Шахматка занятности',
                       'assets/icons/Calendar.png',
-                      const PupilMainPage(2),
+                      const TeacherMainPage(2),
                       true),
                   const SizedBox(height: 20),
                   SidebarIteams('Транзакции', 'assets/icons/sidebar/Swap.png',

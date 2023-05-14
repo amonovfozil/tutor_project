@@ -5,9 +5,13 @@ import 'package:tutor/helper/style_text.dart';
 
 class SelectDropDownButton extends StatefulWidget {
   final List iteams;
+  final Function getvalue;
   late String initialvalue;
   SelectDropDownButton(
-      {required this.iteams, required this.initialvalue, super.key});
+      {required this.iteams,
+      required this.initialvalue,
+      required this.getvalue,
+      super.key});
 
   @override
   State<SelectDropDownButton> createState() => _SelectDropDownButtonState();
@@ -22,7 +26,7 @@ class _SelectDropDownButtonState extends State<SelectDropDownButton> {
         borderRadius: BorderRadius.circular(5),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
         child: DropdownButton(
           style: StylesText().style_4(14),
           isExpanded: true,
@@ -42,6 +46,7 @@ class _SelectDropDownButtonState extends State<SelectDropDownButton> {
           onChanged: (value) {
             setState(() {
               widget.initialvalue = value!.toString();
+              widget.getvalue(value.toString(), widget.iteams[1]);
             });
           },
         ),

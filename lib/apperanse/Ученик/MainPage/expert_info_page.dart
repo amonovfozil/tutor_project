@@ -1,9 +1,9 @@
 // ignore_for_file: file_names, camel_case_types, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/sort_reviews.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/table.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/apperanse/widgets/sort_reviews.dart';
+import 'package:tutor/apperanse/widgets/table.dart';
+import 'package:tutor/helper/Widgets.dart';
 import 'package:tutor/helper/style_text.dart';
 
 class Expert_info extends StatelessWidget {

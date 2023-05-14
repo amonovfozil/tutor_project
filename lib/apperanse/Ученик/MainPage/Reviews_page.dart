@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/helper/Widgets.dart';
 import 'package:tutor/helper/style_text.dart';
 
 class ReviewsPage extends StatefulWidget {

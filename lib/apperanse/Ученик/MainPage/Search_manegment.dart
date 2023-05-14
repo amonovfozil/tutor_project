@@ -1,8 +1,8 @@
 // ignore_for_file: file_names, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/select_DropDownButton.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/apperanse/widgets/select_DropDownButton.dart';
+import 'package:tutor/helper/Widgets.dart';
 import 'package:tutor/helper/style_text.dart';
 
 enum serchType { teacher, school }
@@ -21,6 +21,12 @@ class _SearchManegmentState extends State<SearchManegment> {
   var selectedRange = const RangeValues(90, 420);
   @override
   Widget build(BuildContext context) {
+    void getSelectValue(String value, int index) {
+      if (index == 1) {
+        // SignInData['motherLand'] = value;
+      }
+    }
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 46),
@@ -105,66 +111,54 @@ class _SearchManegmentState extends State<SearchManegment> {
               ),
               const SizedBox(height: 10),
               SelectDropDownButton(
-                iteams: const [
-                  'Online через видеоурок',
-                  'offline через видеоурок'
-                ],
-                initialvalue: 'Online через видеоурок',
-              ),
+                  iteams: const [
+                    'Online через видеоурок',
+                    'offline через видеоурок'
+                  ],
+                  initialvalue: 'Online через видеоурок',
+                  getvalue: getSelectValue),
               const SizedBox(height: 20),
               Text(
                 'Выберите дисциплину:',
                 style: StylesText().style_1_11(16),
               ),
               const SizedBox(height: 10),
-              SelectDropDownButton(
-                iteams: const [
-                  'Английский язык',
-                  'Русский Русский',
-                  'Узбекский  Русский',
-                ],
-                initialvalue: 'Английский язык',
-              ),
+              SelectDropDownButton(iteams: const [
+                'Английский язык',
+                'Русский Русский',
+                'Узбекский  Русский',
+              ], initialvalue: 'Английский язык', getvalue: getSelectValue),
               const SizedBox(height: 20),
               Text(
                 'Укажите вашу страну',
                 style: StylesText().style_1_11(16),
               ),
               const SizedBox(height: 10),
-              SelectDropDownButton(
-                iteams: const [
-                  'Узбекистан',
-                  'Рассия',
-                  'Америка',
-                ],
-                initialvalue: 'Узбекистан',
-              ),
+              SelectDropDownButton(iteams: const [
+                'Узбекистан',
+                'Рассия',
+                'Америка',
+              ], initialvalue: 'Узбекистан', getvalue: getSelectValue),
               const SizedBox(height: 20),
               Text(
                 'Укажите ваш регион',
                 style: StylesText().style_1_11(16),
               ),
               const SizedBox(height: 10),
-              SelectDropDownButton(
-                iteams: const [
-                  'Ташкентский район',
-                  'Бухарский район',
-                ],
-                initialvalue: 'Ташкентский район',
-              ),
+              SelectDropDownButton(iteams: const [
+                'Ташкентский район',
+                'Бухарский район',
+              ], initialvalue: 'Ташкентский район', getvalue: getSelectValue),
               const SizedBox(height: 20),
               Text(
                 'Пол преподавателя',
                 style: StylesText().style_1_11(16),
               ),
               const SizedBox(height: 10),
-              SelectDropDownButton(
-                iteams: const [
-                  'Женский',
-                  'Мужской',
-                ],
-                initialvalue: 'Женский',
-              ),
+              SelectDropDownButton(iteams: const [
+                'Женский',
+                'Мужской',
+              ], initialvalue: 'Женский', getvalue: getSelectValue),
               const SizedBox(height: 20),
               Text(
                 'Рейтинг',

@@ -5,10 +5,10 @@ import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/%D
 import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/NewsPage.dart';
 import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/Reviews_page.dart';
 import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/Search_manegment.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/category_course_iteams.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/category_news_iteams.dart';
+import 'package:tutor/apperanse/widgets/category_course_iteams.dart';
+import 'package:tutor/apperanse/widgets/category_news_iteams.dart';
 import 'package:tutor/data/category.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/helper/Widgets.dart';
 import 'package:tutor/helper/style_text.dart';
 
 class mainPage extends StatefulWidget {

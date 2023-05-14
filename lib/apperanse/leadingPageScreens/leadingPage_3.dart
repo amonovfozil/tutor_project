@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:tutor/helper/style_text.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/helper/Widgets.dart';
 
 class LeadingPage3 extends StatelessWidget {
   final Function function;

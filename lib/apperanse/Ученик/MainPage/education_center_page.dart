@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/expert_info_page.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/sort_reviews.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/widgets/video_player.dart';
+import 'package:tutor/apperanse/widgets/sort_reviews.dart';
+import 'package:tutor/apperanse/widgets/video_player.dart';
 import 'package:tutor/data/Data_IT.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/helper/Widgets.dart';
 import 'package:tutor/helper/style_text.dart';
 
 class EducationCenter extends StatelessWidget {

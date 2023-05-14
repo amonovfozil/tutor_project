@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tutor/apperanse/leadingPageScreens/leadingPage_3.dart';
 import 'package:tutor/apperanse/leadingPageScreens/middlePage_1.dart';
 import 'package:tutor/helper/style_text.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/helper/Widgets.dart';
 
 class LeadingPage2 extends StatelessWidget {
   const LeadingPage2({super.key});

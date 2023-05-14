@@ -5,7 +5,7 @@ import 'package:tutor/apperanse/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2
 import 'package:tutor/apperanse/AuthScreen/SignIn_screen(school%20).dart';
 import 'package:tutor/apperanse/AuthScreen/SignIn_screen(teacher%20&%20Pupil%20)%20copy.dart';
 import 'package:tutor/helper/style_text.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/helper/Widgets.dart';
 
 enum category { school, pupil, teacher }
 

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:tutor/apperanse/leadingPageScreens/LeadingPage_2.dart';
 import 'package:tutor/helper/style_text.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/helper/Widgets.dart';
 
 class LeadingPage1 extends StatelessWidget {
   const LeadingPage1({super.key});

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tutor/apperanse/leadingPageScreens/Leadingpage_1.dart';
 import 'package:tutor/apperanse/leadingPageScreens/leadingPage_3.dart';
 import 'package:tutor/helper/style_text.dart';
-import 'package:tutor/helper/buttonWidgets.dart';
+import 'package:tutor/helper/Widgets.dart';
 
 class SignInScreen3 extends StatelessWidget {
   const SignInScreen3({super.key});
