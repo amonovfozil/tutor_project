@@ -28,7 +28,7 @@ class _SelectDropDownButtonState extends State<SelectDropDownButton> {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
         child: DropdownButton(
-          style: StylesText().style_4(14),
+          style: StylesText().style_4(13),
           isExpanded: true,
           value: widget.initialvalue,
           underline: Container(),
@@ -46,7 +46,7 @@ class _SelectDropDownButtonState extends State<SelectDropDownButton> {
           onChanged: (value) {
             setState(() {
               widget.initialvalue = value!.toString();
-              widget.getvalue(value.toString(), widget.iteams[1]);
+              // widget.getvalue(value.toString(), widget.iteams[1]);
             });
           },
         ),

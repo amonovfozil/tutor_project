@@ -1,16 +1,17 @@
 // ignore_for_file: file_names, prefer_const_literals_to_create_immutables, unused_local_variable, non_constant_identifier_names, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
-import 'package:tutor/apperanse/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/2.1.Profile_screen.dart';
-import 'package:tutor/apperanse/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/SideBar2_screen.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/Category_IT.dart';
-import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/NewsPage.dart';
+import 'package:tutor/apperanse/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/4.Employment_List.dart';
+import '../2.1.Profile_screen.dart';
+import '../2.TeachReviews_page_screen.dart';
+import '../3.TeachChat_screen.dart';
+import '../SideBar2_screen.dart';
 import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage/News_info.dart';
 import 'package:tutor/apperanse/commonPage/5.Balans_screen.dart';
 import 'package:tutor/apperanse/commonPage/Notifications.dart';
 
-import '../../data/category.dart';
-import '../../helper/style_text.dart';
+import '../../../data/category.dart';
+import '../../../helper/style_text.dart';
 
 class TeacherMainPage extends StatefulWidget {
   final int Pageindex;
@@ -35,11 +36,11 @@ class _TeacherMainPageState extends State<TeacherMainPage> {
       category(
           title: 'Профиль',
           icon: 'assets/icons/naviagtion/pupil.png',
-          rout: const NewsPage()),
+          rout: const ProfileScreen2()),
       category(
           title: 'Отзывы',
           icon: 'assets/icons/sidebar/chat.png',
-          rout: const NewsPage()),
+          rout: const TeachReviewsPage()),
       category(
           title: 'Шахматка',
           icon: 'assets/icons/Calendar.png',
@@ -47,7 +48,7 @@ class _TeacherMainPageState extends State<TeacherMainPage> {
       category(
           title: 'Баланс',
           icon: 'assets/icons/naviagtion/balans.png',
-          rout: const Category_IT()),
+          rout: const BalansScreen(ProfileScreen2())),
     ];
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -127,15 +128,13 @@ class _TeacherMainPageState extends State<TeacherMainPage> {
             // child:
             index == 0
                 ? const ProfileScreen2()
-                :
-                // : index == 1
-                // ? const ProfileScreen()
-                // : index == 2
-                //     ? const FavoritesScreen()
-                //     : index == 4
-                // ? const ChatScreen()
-                // :
-                Container(),
+                : index == 1
+                    ? const TeachReviewsPage()
+                    : index == 2
+                        ? const EmploymentList()
+                        : index == 4
+                            ? const TeaCCHatScreen()
+                            : Container(),
             // ),
           ],
         ),

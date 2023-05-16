@@ -1,10 +1,10 @@
 // ignore_for_file: file_names, unused_element, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:tutor/apperanse/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/Main_Page.dart';
+import 'package:tutor/apperanse/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/MainPage/Main_Page.dart';
+import 'package:tutor/apperanse/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/MainPage/Teach_reviews.dart';
 import 'package:tutor/apperanse/AuthScreen/category_Auth.dart';
 import 'package:tutor/apperanse/commonPage/5.Balans_screen.dart';
-import 'package:tutor/apperanse/commonPage/My_reviews.dart';
 import 'package:tutor/apperanse/commonPage/Paid%20services.dart';
 import 'package:tutor/apperanse/commonPage/Transactions.dart';
 import 'package:tutor/helper/style_text.dart';
@@ -116,8 +116,8 @@ class SideBar2 extends StatelessWidget {
                   SidebarIteams('Транзакции', 'assets/icons/sidebar/Swap.png',
                       const Transactions(), false),
                   const SizedBox(height: 20),
-                  SidebarIteams('Мои отзывы', 'assets/icons/sidebar/chat.png',
-                      const MyReviews(), false),
+                  SidebarIteams('отзывы', 'assets/icons/sidebar/chat.png',
+                      const TeachReviews(), false),
                   const SizedBox(height: 20),
                   SidebarIteams('Выйти', 'assets/icons/sidebar/Logout.png',
                       const categoryAuth(), true),

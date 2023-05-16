@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/MainPage.dart';
 import 'package:tutor/apperanse/AuthScreen/category_Auth.dart';
 import 'package:tutor/apperanse/commonPage/5.Balans_screen.dart';
-import 'package:tutor/apperanse/commonPage/My_reviews.dart';
+import 'package:tutor/apperanse/%D0%A3%D1%87%D0%B5%D0%BD%D0%B8%D0%BA/My_reviews.dart';
 import 'package:tutor/apperanse/commonPage/Paid%20services.dart';
 import 'package:tutor/apperanse/commonPage/Transactions.dart';
 import 'package:tutor/helper/style_text.dart';

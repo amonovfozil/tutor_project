@@ -32,8 +32,6 @@ class _ReviewsPageState extends State<ReviewsPage> {
     });
   }
 
-  var ispicked = false;
-
   @override
   Widget build(BuildContext context) {
     if (init) {
@@ -45,149 +43,143 @@ class _ReviewsPageState extends State<ReviewsPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Form(
-          child: InkWell(
-            onTap: () {
-              setState(() {
-                ispicked = true;
-              });
-            },
-            child: Stack(
-              children: [
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 46),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      InkWell(
-                        onTap: () => Navigator.of(context).pop(),
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: SizedBox(
-                            width: 12,
-                            height: 22,
-                            child: Image.asset(
-                              'assets/icons/back.png',
-                            ),
+          child: Stack(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 46),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    InkWell(
+                      onTap: () => Navigator.of(context).pop(),
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: SizedBox(
+                          width: 12,
+                          height: 22,
+                          child: Image.asset(
+                            'assets/icons/back.png',
                           ),
                         ),
                       ),
-                      const SizedBox(height: 26),
-                      Text(
-                        'Отзывы',
-                        textAlign: TextAlign.left,
-                        style: StylesText().style_1_11(32),
-                      ),
-                      const SizedBox(height: 20),
-                      reviews_users(pageData),
-                      const SizedBox(height: 30),
-                      Center(
-                        child: SizedBox(
-                          height: 25,
-                          width: 40 * (data.length ~/ 6 + 1),
-                          child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              itemCount: data.length ~/ 6 + 1,
-                              itemBuilder: (ctx, i) {
-                                return Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(horizontal: 5),
-                                  child: InkWell(
-                                    onTap: () => nextPage(i),
-                                    child: Container(
-                                      height: 25,
-                                      width: 25,
-                                      decoration: BoxDecoration(
-                                        color: indexnow == i
-                                            ? const Color(0xFF47406A)
-                                            : Colors.transparent,
-                                        // border: Border.all(width: 1, color: Colors.black),
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        (i + 1).toString(),
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w700,
-                                            color: indexnow == i
-                                                ? const Color(0xFFD3D3D3)
-                                                : Colors.black,
-                                            fontStyle: FontStyle.normal,
-                                            fontFamily: 'Gotham Pro'),
-                                      ),
+                    ),
+                    const SizedBox(height: 26),
+                    Text(
+                      'Отзывы',
+                      textAlign: TextAlign.left,
+                      style: StylesText().style_1_11(32),
+                    ),
+                    const SizedBox(height: 20),
+                    reviews_users(pageData),
+                    const SizedBox(height: 30),
+                    Center(
+                      child: SizedBox(
+                        height: 25,
+                        width: 40 * (data.length ~/ 6 + 1),
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: data.length ~/ 6 + 1,
+                            itemBuilder: (ctx, i) {
+                              return Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 5),
+                                child: InkWell(
+                                  onTap: () => nextPage(i),
+                                  child: Container(
+                                    height: 25,
+                                    width: 25,
+                                    decoration: BoxDecoration(
+                                      color: indexnow == i
+                                          ? const Color(0xFF47406A)
+                                          : Colors.transparent,
+                                      // border: Border.all(width: 1, color: Colors.black),
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      (i + 1).toString(),
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700,
+                                          color: indexnow == i
+                                              ? const Color(0xFFD3D3D3)
+                                              : Colors.black,
+                                          fontStyle: FontStyle.normal,
+                                          fontFamily: 'Gotham Pro'),
                                     ),
                                   ),
-                                );
-                              }),
+                                ),
+                              );
+                            }),
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    TextFormField(
+                      style: StylesText().style_4(15),
+                      maxLines: 6,
+                      decoration: InputDecoration(
+                        alignLabelWithHint: true,
+                        filled: true,
+                        fillColor: Colors.white,
+                        labelText: 'Введите отзыв...',
+                        labelStyle: StylesText().style_4(15),
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: [
+                        Text(
+                          'Поставить оценку',
+                          textAlign: TextAlign.left,
+                          style: StylesText().style_1_11(17),
                         ),
-                      ),
-                      const SizedBox(height: 30),
-                      TextFormField(
-                        style: StylesText().style_4(15),
-                        maxLines: 6,
-                        decoration: InputDecoration(
-                          alignLabelWithHint: true,
-                          filled: true,
-                          fillColor: Colors.white,
-                          labelText: 'Введите отзыв...',
-                          labelStyle: StylesText().style_4(15),
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide.none,
-                              borderRadius: BorderRadius.circular(10)),
+                        const Spacer(),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: const [
+                            Icon(
+                              Icons.star_rate_rounded,
+                              color: Color(0xFFF4B840),
+                              size: 26,
+                            ),
+                            Icon(
+                              Icons.star_rate_rounded,
+                              color: Color(0xFFF4B840),
+                              size: 26,
+                            ),
+                            Icon(
+                              Icons.star_rate_rounded,
+                              color: Color(0xFFF4B840),
+                              size: 26,
+                            ),
+                            Icon(
+                              Icons.star_rate_rounded,
+                              color: Color(0xFFF4B840),
+                              size: 26,
+                            ),
+                            Icon(
+                              Icons.star_border_rounded,
+                              color: Color(0xFFF4B840),
+                            ),
+                          ],
                         ),
-                      ),
-                      const SizedBox(height: 20),
-                      Row(
-                        children: [
-                          Text(
-                            'Поставить оценку',
-                            textAlign: TextAlign.left,
-                            style: StylesText().style_1_11(17),
-                          ),
-                          const Spacer(),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: const [
-                              Icon(
-                                Icons.star_rate_rounded,
-                                color: Color(0xFFF4B840),
-                                size: 26,
-                              ),
-                              Icon(
-                                Icons.star_rate_rounded,
-                                color: Color(0xFFF4B840),
-                                size: 26,
-                              ),
-                              Icon(
-                                Icons.star_rate_rounded,
-                                color: Color(0xFFF4B840),
-                                size: 26,
-                              ),
-                              Icon(
-                                Icons.star_rate_rounded,
-                                color: Color(0xFFF4B840),
-                                size: 26,
-                              ),
-                              Icon(
-                                Icons.star_border_rounded,
-                                color: Color(0xFFF4B840),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(width: 20),
-                        ],
-                      ),
-                      const SizedBox(height: 30),
-                      widgets().Button_1('Оставить отзыв', () {},const Color(0xFFF4B840)),
-                      const SizedBox(height: 30),
-                    ],
-                  ),
+                        const SizedBox(width: 20),
+                      ],
+                    ),
+                    const SizedBox(height: 30),
+                    widgets().Button_1(
+                        'Оставить отзыв', () {}, const Color(0xFFF4B840)),
+                    const SizedBox(height: 30),
+                  ],
                 ),
-                if (!ispicked) const manual_qollanma()
-              ],
-            ),
+              ),
+              const manual_qollanma()
+            ],
           ),
         ),
       ),
