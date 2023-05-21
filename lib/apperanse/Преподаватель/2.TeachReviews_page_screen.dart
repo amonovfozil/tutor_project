@@ -122,9 +122,9 @@ class _TeachReviewsPageState extends State<TeachReviewsPage> {
                         style: StylesText().style_1_11(17),
                       ),
                       const Spacer(),
-                      Row(
+                      const Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: const [
+                        children: [
                           Icon(
                             Icons.star_rate_rounded,
                             color: Color(0xFFF4B840),

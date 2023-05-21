@@ -64,7 +64,6 @@ class ProfileScreen2 extends StatelessWidget {
     void saveNewData() {
       if (formKey.currentState!.validate()) {
         formKey.currentState!.save();
-        print(TeacherInfo);
       }
     }
 
